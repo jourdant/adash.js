@@ -1,0 +1,8 @@
+{ 
+	"name": 			"adash.js",
+	"description": 		"node.js handler for using wifi devices as IoT triggers",
+	"version": 			"0.0.1",
+	"devDependencies": 	{
+	
+	}
+}
