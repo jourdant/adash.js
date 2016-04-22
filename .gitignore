@@ -28,3 +28,5 @@ build/Release
 node_modules/*
 !/node_modules/beacon-sample-*
 !/node_modules/trigger-*
+.vscode
+.vs

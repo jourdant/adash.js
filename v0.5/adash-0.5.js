@@ -40,7 +40,7 @@ function handleOutput(source, data) {
                 var date = new Date();
                 if (line.indexOf(button.mac.toLowerCase()) > -1 && (button.last_fired == null || Math.abs(date - button.last_fired) > 15000)) {
                     button.last_fired = date;
-                    log('event', 'Button '' + button.name + '' pushed.');
+                    log('event', "Button " + button.name + " pushed.");
                     button.handler();
                     return;
                 }

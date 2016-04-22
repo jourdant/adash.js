@@ -32,12 +32,14 @@ function loadModules(base, prefix, index) {
 function handler(source, mac) {
 	var beacon = beacons[mac.toLowerCase()];
 
+
 	if (beacon != null ) {
 		var date = new Date();
 		if (beacon.last_triggered == null || Math.abs(date - beacon.last_triggered) > 15000) {
 			beacon.last_triggered = date;
 			log('event', "Beacon '" + beacon.name + "' pushed.");
-			beacon.execute();
+			
+			try { beacon.execute(); } catch (ex) { log('ERROR', 'Exception :' + ex); }
 		}
 	}
 }
